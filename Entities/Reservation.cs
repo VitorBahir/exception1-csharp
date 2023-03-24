@@ -9,28 +9,39 @@ namespace exception1_csharp.Entities
     internal class Reservation
     {
         public int RoomNumber { get; set; }
-        public DateTime Checkin { get; set; }
-        public DateTime Checkout { get; set; }
+        public DateTime CheckIn { get; set; }
+        public DateTime CheckOut { get; set; }
 
         public Reservation() { }
 
         public Reservation(int roomNumber, DateTime checkin, DateTime checkout)
         {
             RoomNumber = roomNumber;
-            Checkin = checkin;
-            Checkout = checkout;
+            CheckIn = checkin;
+            CheckOut = checkout;
         }
 
         public int Duration()
         {
-            TimeSpan duration = Checkout.Subtract(Checkin);
+            TimeSpan duration = CheckOut.Subtract(CheckIn);
             return (int)duration.TotalDays;
         }
 
-        public void UpdateDates(DateTime checkIn, DateTime checkOut)
+        public string UpdateDates(DateTime checkIn, DateTime checkOut)
         {
-            Checkin = checkIn;
-            Checkout = checkOut;
+            DateTime now = DateTime.Now;
+            if (checkIn < now || checkOut < now)
+            {
+                return "Reservation dates for update must be future dates";
+            }
+            if (checkOut <= checkIn)
+            {
+                return "Check-out date must be after check-in date";
+            }
+
+            CheckIn = checkIn;
+            CheckOut = checkOut;
+            return null;
         }
 
         public override string ToString()
@@ -38,9 +49,9 @@ namespace exception1_csharp.Entities
             return "Room "
                 + RoomNumber
                 + ", Check-in: "
-                + Checkin.ToString("dd/MM/yyyy")
+                + CheckIn.ToString("dd/MM/yyyy")
                 + ", Check-out"
-                + Checkout.ToString("dd/MM/yyyy")
+                + CheckOut.ToString("dd/MM/yyyy")
                 + ", "
                 + Duration()
                 + " nights";
