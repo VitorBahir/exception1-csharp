@@ -1,8 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using exception1_csharp.Entities.Exceptions;
 
 namespace exception1_csharp.Entities
 {
@@ -14,11 +11,15 @@ namespace exception1_csharp.Entities
 
         public Reservation() { }
 
-        public Reservation(int roomNumber, DateTime checkin, DateTime checkout)
+        public Reservation(int roomNumber, DateTime checkIn, DateTime checkOut)
         {
+            if (checkOut <= checkIn)
+            {
+                throw new DomainException("Check-out date must be after check-in date");
+            }
             RoomNumber = roomNumber;
-            CheckIn = checkin;
-            CheckOut = checkout;
+            CheckIn = checkIn;
+            CheckOut = checkOut;
         }
 
         public int Duration()
@@ -27,21 +28,20 @@ namespace exception1_csharp.Entities
             return (int)duration.TotalDays;
         }
 
-        public string UpdateDates(DateTime checkIn, DateTime checkOut)
+        public void UpdateDates(DateTime checkIn, DateTime checkOut)
         {
             DateTime now = DateTime.Now;
             if (checkIn < now || checkOut < now)
             {
-                return "Reservation dates for update must be future dates";
+                throw new DomainException("Reservation dates for update must be future dates");
             }
             if (checkOut <= checkIn)
             {
-                return "Check-out date must be after check-in date";
+                throw new DomainException("Check-out date must be after check-in date");
             }
 
             CheckIn = checkIn;
             CheckOut = checkOut;
-            return null;
         }
 
         public override string ToString()
