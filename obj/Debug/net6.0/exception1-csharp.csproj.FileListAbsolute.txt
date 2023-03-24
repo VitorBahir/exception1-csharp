@@ -1,0 +1,15 @@
+C:\temp\projetos\exception1-csharp\exception1-csharp\bin\Debug\net6.0\exception1-csharp.exe
+C:\temp\projetos\exception1-csharp\exception1-csharp\bin\Debug\net6.0\exception1-csharp.deps.json
+C:\temp\projetos\exception1-csharp\exception1-csharp\bin\Debug\net6.0\exception1-csharp.runtimeconfig.json
+C:\temp\projetos\exception1-csharp\exception1-csharp\bin\Debug\net6.0\exception1-csharp.dll
+C:\temp\projetos\exception1-csharp\exception1-csharp\bin\Debug\net6.0\exception1-csharp.pdb
+C:\temp\projetos\exception1-csharp\exception1-csharp\obj\Debug\net6.0\exception1-csharp.csproj.AssemblyReference.cache
+C:\temp\projetos\exception1-csharp\exception1-csharp\obj\Debug\net6.0\exception1-csharp.GeneratedMSBuildEditorConfig.editorconfig
+C:\temp\projetos\exception1-csharp\exception1-csharp\obj\Debug\net6.0\exception1-csharp.AssemblyInfoInputs.cache
+C:\temp\projetos\exception1-csharp\exception1-csharp\obj\Debug\net6.0\exception1-csharp.AssemblyInfo.cs
+C:\temp\projetos\exception1-csharp\exception1-csharp\obj\Debug\net6.0\exception1-csharp.csproj.CoreCompileInputs.cache
+C:\temp\projetos\exception1-csharp\exception1-csharp\obj\Debug\net6.0\exception1-csharp.dll
+C:\temp\projetos\exception1-csharp\exception1-csharp\obj\Debug\net6.0\refint\exception1-csharp.dll
+C:\temp\projetos\exception1-csharp\exception1-csharp\obj\Debug\net6.0\exception1-csharp.pdb
+C:\temp\projetos\exception1-csharp\exception1-csharp\obj\Debug\net6.0\exception1-csharp.genruntimeconfig.cache
+C:\temp\projetos\exception1-csharp\exception1-csharp\obj\Debug\net6.0\ref\exception1-csharp.dll
